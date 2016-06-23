@@ -1,0 +1,128 @@
+
+<style>
+    .panel-success > .panel-heading {
+        color: #428bca;
+        background-color: lightblue;
+    }
+
+    .panel-success{
+        border-color:#ddd;
+    }
+
+    .col-md-3{
+        font-size: 16px;
+        height: 34px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 30px
+    }
+
+    .panel-body>.row{
+        margin-top: 5px;
+    }
+</style>
+
+
+<!--农作物管理模块-->
+<h3 class="sub-header">农作物管理</h3>
+
+<!--农作物添加区域-->
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h4 class="panel-title">添加区域农作物</h4>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6" >
+                        <div class="col-md-3">区域名称</div>
+                        <div class="col-md-4">
+                            <select class="col-md-4 form-control" id="area-name">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-3">农作物名称</div>
+                        <div class="col-md-4">
+                            <select class="col-md-4 form-control" id="crops-name">
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-md-3">种植时间</div>
+                        <div class="col-md-4">
+                            <input type="date" class="col-md-4 form-control" id="crops-time">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-3">建议收获时间</div>
+                        <div class="col-md-4">
+                            <input type="date" class="col-md-4 form-control" id="crops-harvest">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-md-3">预估产量</div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="production">
+                        </div>
+                        <div class="col-md-3">千克（kg）</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-offset-11">
+                        <button type="submit" class="btn btn-danger" id="create">&nbsp;&nbsp;创建&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--col-md-10-->
+</div> <!--row-->
+
+
+
+<!--table field-->
+<div>
+    <table id="crops-manage" class="table-control" data-show-refresh="true" data-search="true">
+    </table>
+</div>
+
+<script src="../templates/modules/crops-manage/crops-manage.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

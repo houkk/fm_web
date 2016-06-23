@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>田间环境监测平台</title>
+
+    <!-- Bootstrap -->
+    <link href="../templates/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../templates/css/font-awesome.css" rel="stylesheet">
+    <link href="../templates/css/common.css" rel="stylesheet">
+
+    <link href="../templates/css/bootstrap-table.min.css" rel="stylesheet">
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../templates/js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../templates/js/bootstrap.min.js"></script>
+    <script src="../templates/js/bootstrap-table.min.js"></script>
+    <script src="../templates/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../templates/js/common.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+  </head>
+  <body>
+  <!--顶部导航条-->
+  <nav class="navbar navbar-inverse navbar-fixed-top nav_color" style="height: auto">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" style="font-size:20px;">田间环境监测平台</a>
+          </div>
+          <div style="">
+              <button class="btn btn-default head-button1" onclick="turnPage('../templates/modules/real-time-warning/real-time-warning.html')">实时警报<span class="badge" style="background-color: #fa623f;position: absolute;margin-top: 5px;"></span></button>
+              <button class="btn btn-default head-button2" onclick="turnPage('../templates/modules/real-time-data/real-time-data.html')">实时数据</button>
+          </div>
+
+
+      </div>
+  </nav>
+
+  <!--侧边栏-->
+  <div class="container-fluid">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-3 col-md-2 sidebar" style="overflow-y: auto">
+                  <ul class='topnav nav nav-sidebar accordion'>
+                      <li>
+                          <a class="active">田间管理<i class='fa fa-chevron-down'></i></a>
+                          <ul class='nav submenu'>
+                              <li><a onclick="turnPage('../templates/modules/crops-information/crops-info.html')">农作物信息</a></li>
+                              <li><a onclick="turnPage('../templates/modules/crops-manage/crops-manage.html')">农作物管理</a></li>
+                              <li><a onclick="turnPage('../templates/modules/fertilizer-information/fertilizer-info.html')">肥料信息</a></li>
+                              <li><a onclick="turnPage('../templates/modules/fertilizer-manage/fertilizer-manage.html')">肥料管理</a></li>
+                              <li><a onclick="turnPage('../templates/modules/pesticides-information/pesticides-info.html')">农药信息</a></li>
+                              <li><a onclick="turnPage('../templates/modules/pesticides-manage/pesticides-manage.html')">农药管理</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a>数据采集<i class='fa fa-chevron-down'></i></a>
+                          <ul class='nav submenu'>
+                              <li><a onclick="turnPage('../templates/modules/real-time-data/real-time-data.html')">实时数据</a></li>
+                              <li><a onclick="turnPage('../templates/modules/history-data/history-data.html')">历史数据</a></li>
+                          </ul>
+                      </li>
+
+                      <li>
+                          <a>监测与警报<i class='fa fa-chevron-down'></i></a>
+                          <ul class='nav submenu'>
+                              <li><a onclick="turnPage('../templates/modules/real-time-warning/real-time-warning.html')">实时警报</a></li>
+                              <li><a onclick="turnPage('../templates/modules/history-warning/history-warning.html')">历史警报</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="content">
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </body>
+</html>

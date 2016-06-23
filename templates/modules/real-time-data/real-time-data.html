@@ -1,0 +1,73 @@
+<!--实时数据模块-->
+
+<script src="../templates/js/echarts.min.js"></script>
+
+<style>
+    .btn{
+        border-radius:0;
+    }
+    .panel{
+        border-radius:0;
+        width: 100%;
+    }
+    .panel-primary{
+        border-color: #428bca;
+    }
+    .panel-heading{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .myspan{
+        height: 34px;
+        vertical-align: middle;
+    }
+</style>
+
+<h3 class="sub-header">实时数据</h3>
+<!--table field-->
+<div>
+    <table style="width: 100%">
+        <tr>
+            <td style="vertical-align: top;width: 200px;padding-top: 15px">
+                <span class="myspan">选择区域&nbsp;&nbsp;</span>
+                <!-- Single button -->
+                <div class="btn-group" id="area">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="area_first"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
+                    <ul class="dropdown-menu" style="height: 200px;overflow: auto">
+
+                    </ul>
+                </div>
+                <br />
+                <br />
+                <span class="myspan">选择田块&nbsp;&nbsp;</span>
+                <!-- Single button -->
+                <div class="btn-group" id="field">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="field_first"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="panel panel-primary" style="margin-top: 15px;margin-left: 10px">
+                    <div class="panel-heading">实时温度</div>
+                    <div class="panel-body">
+                        <div id="chart_temper" style="height: 400px"></div>
+                    </div>
+                </div>
+                <div class="panel panel-primary" style="margin-top: 15px;margin-left: 10px">
+                    <div class="panel-heading">实时PH值</div>
+                    <div class="panel-body">
+                        <div id="chart_ph" style="height: 400px"></div>
+                    </div>
+                </div>
+                <div class="panel panel-primary" style="margin-top: 15px;margin-left: 10px">
+                    <div class="panel-heading">实时湿度</div>
+                    <div class="panel-body">
+                        <div id="chart_water" style="height: 400px"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="../templates/modules/real-time-data/real-time-data.js"></script>
